@@ -24,7 +24,7 @@ class User < ApplicationRecord
         duration_btw_injections << Injection.duration_btw_injections(inj_1, inj_2)
       end
     end
-    duration_btw_injections.uniq.reject{|duration| duration < 6}.any?
+    duration_btw_injections.uniq.reject { |duration| duration < 6 }.any?
   end
 
   def check_covid_btw_14_65
