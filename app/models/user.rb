@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :injections
   validates :birth_date, presence: true
 
-  def up_to_date_with_covid?
+  def immune_from_covid?
     return false unless injections.any?
 
     case age_in_days
